@@ -1,0 +1,58 @@
+  
+<div class="order-top">
+  <h2 class="booking_title">予約日時</h2>
+  <p class="book_date"><%= @book.date %></p>
+</div>
+
+
+<%= form_with model: @orders, id: 'charge-form', class: 'card-form',local: true do |f| %>
+  <%= render 'layouts/error_messages', model: @order %>
+  <div class='form-wrap'>
+    <%= f.label :name, "名前" %>
+    <%= f.text_field :name, class:"name", placeholder:"氏名" %>
+  </div>
+
+    <div class='form-wrap'>
+    <%= f.label :mail, "メールアドレス" %>
+    <%= f.text_field :mail, class:"mail", placeholder:"メールアドレス" %>
+  </div>
+
+  <div class='form-wrap'>
+    <%= f.label :phone_number, "電話番号" %>
+    <%= f.text_field :phone_number, class:"phone_number", placeholder:"電話番号" %>
+  </div>
+
+  <div class='form-wrap'>
+    <%= f.label :number,  "カード番号" %>
+    <%= f.text_field :number, class:"number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+  </div>
+
+  <div class='form-wrap'>
+    <%= f.label :cvc ,"CVC" %>
+    <%= f.text_field :cvc, class:"cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4" %>
+  </div>
+
+  <div class='form-wrap'>
+    <p>有効期限</p>
+    <div class='input-expiration-date-wrap'>
+      <%= f.text_field :exp_month, class:"exp_month", placeholder:"例)3" %>
+      <p>月</p>
+      <%= f.text_field :exp_year, class:"exp_year", placeholder:"例)24" %>
+      <p>年</p>
+    </div>
+  </div>
+
+  <div class='form-wrap price'>
+    <%= f.label :price ,"金額(円)" %>
+    <%= f.text_field :price, class:"price", value: @price, maxlength:"5" %>
+  </div>
+
+  <% if @book.order.nil? %>
+    <%= f.submit "予約する", class:"button", id: "button" %>
+  <% else %>
+    <p class="already-book">
+      すでに予約された日付です。
+    </p>
+  <% end %>
+<% end %>
+

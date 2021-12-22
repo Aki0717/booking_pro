@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookingApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+  
+    <header class="header">
+      <div class="container">
+        <div class="header-nav">
+          <h1 class="site-title"><a href="/">CREATiVE × COSAY</a></h1>
+          <ul class="nav-item">
+            <li class="item"><a href="#concept">コンセプト</a></li>
+            <li class="item"><a href="#book">ご予約</a></li>
+            <li class="item"><a href="#price">料金表</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+
+    <%= yield %>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-nav">
+          <div class="footer-item-wrapper">
+            <p class="footer-title">製品情報</p>
+            <ul class="footer-nav-list">
+              <li class="footer-item"><a href="#concept">コンセプト</a></li>
+              <li class="footer-item"><a href="#book">ご予約のお客様</a></li>
+              <li class="footer-item"><a href="#price">料金表</a></li>
+            </ul>
+          </div>
+          <div class="footer-item-wrapper">
+            <p class="footer-title">お問い合わせ</p>
+            <ul class="footer-nav-item">
+              <li class="footer-item"><a href="">akagiya0358@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="footer-item-wrapper">
+            <a href="https://www.instagram.com/creative_cosay/?utm_medium=copy_link" class="sns-icon"><%= image_tag 'instagram.png', size: "25x25", alt: "instagramの画像"%></a>
+            <a href="https://twitter.com/CREATiVE_COSAY" class="sns-icon"><%= image_tag 'twitter.png', size: "25x25", alt: "twitterの画像" %></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  </body>
+</html>

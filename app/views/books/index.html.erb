@@ -1,0 +1,112 @@
+<section class="fv">
+  <div class="container">
+    <p class="fv-text">好きな人と、好きなときに、好きなタイミングで。</p>
+  </div>
+</section>
+
+<section class="concept" id="concept">
+  <div class="container">
+    <h2 class="section-title"><span>Our CONCEPT</span>コンセプト</h2>
+    <ul class="concept-card">
+      <li class="concept-item">
+        <%= image_tag 'room.png', class:"item-img" %> 
+        <p class="item-title">プロの機材が使えます</p>
+        <p class="item-text">
+          来ていただいた方々全員がプロが撮影現場で使う<br>
+          カメラ・照明が使用できます。<br>
+          スマホよりも圧倒的な高画質で写真がとれる！
+        </p>
+        <p class="concept-number">CONCEPT 01</p>
+      </li>
+      <li class="concept-item">
+        <%= image_tag 'dontmind.png', class:"item-img" %>
+        <p class="item-title">誰の目も気にする必要はありません</p>
+        <p class="item-text">
+          完全個室で貸切の空間。撮影中スタッフはいません<br>
+          あなただけの空間で、好きなミュージックをかけて<br>
+          緊張せずに思いっきり楽しめます！
+        </p>
+        <p class="concept-number">CONCEPT 02</p>
+      </li>
+      <li class="concept-item">
+        <%= image_tag 'self.png', class:"item-img" %>
+        <p class="item-title">好きなタイミングでシャッターを押せる</p>
+        <p class="item-text">
+          撮影用リモコンを使って、好きなタイミング、<br>
+          好きな角度、ポーズを自由に決めて<br>
+          自分史上最高の自分と出会える！
+        </p>
+        <p class="concept-number">CONCEPT 03</p>
+      </li>
+    </ul>
+    <p class="concept-message">ご家族・恋人・お友達同士とナチュラルな表情で写真撮影するならCREATiVE × COSAYへ！</p>
+  </div>
+</section>
+
+<section class="booking-now" id="book">
+  <div class="container">
+    <h2 class="section-title"><span>Book Now</span>ご予約はこちらをクリック！</h2>
+    <%#= @post.content %>
+    <%#= @post.created_at %>
+
+      <div class="box-wrap">
+        <% @books.first(30).each do |book| %>
+            <%= link_to book_orders_path(book.id) do %>
+                <div class="post">
+                  <% if book.order.present? %>
+                    <div class="sold-out">
+                      <span>SOLD OUT</span>
+                    </div>
+                  <% end %>
+                  <div class="post-date">
+                    <p>予約日時：<br><%= book.date %></p>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+      </div>
+    <%# rubyコードの埋め込み %>
+  </div>
+</section>
+
+
+<section class="price-list" id="price">
+  <div class="container">
+  <h2 class="section-title"><span>OUR Price</span>料金一覧</h2>
+    <ul class="price-card">
+      <li class="price-item">
+        <h3>スタンダード</h3>
+        <p class="price">¥ 8000 / 回</p>
+        <div class="price-wrapper">
+          <p class="detail">人数</p>
+          <p class="more-detail">1人</p>
+        </div>
+
+        <div class="price-wrapper">
+          <p class="detail">もらえるデータ</p>
+          <p class="more-detail">すべて</p>
+        </div>
+
+        <div class="price-wrapper">
+          <p class="detail">時間</p>
+          <p class="more-detail">1時間</p>
+        </div>
+
+        <div class="price-wrapper">
+          <p class="detail">延長</p>
+          <p class="more-detail">不可</p>
+        </div>
+
+        <div class="price-wrapper">
+          <p class="detail">データ転送</p>
+          <p class="more-detail">ご自身で</p>
+        </div>
+
+        <a href="#book">
+          <button class="btn price-btn">予約する</button>
+        </a>
+
+      </li>
+    </ul>
+  </div>
+</section>

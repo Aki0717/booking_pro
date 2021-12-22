@@ -1,0 +1,205 @@
+// 共通
+
+.section-title{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+section{
+  margin-bottom: 100px;
+}
+.section-title span{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-right: 20px;
+  color: #498ee0;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.section-title span::before{
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+  width: 40px;
+  height: 1px;
+  background-color: #498ee0;
+}
+
+
+// fv
+
+
+
+.fv{
+  padding: 30px 0;
+  margin-bottom: 120px;
+  height: 70vh;
+  background-image: url('fv.png');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.fv-text{
+  font-size: 34px;
+  text-align: right;
+  line-height: 40px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+
+// コンセプト
+.concept-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+  .concept-item{
+    height: 400px;
+    width: 330px;
+    margin-bottom: 20px;
+    border: 1px #707070 solid;
+    border-radius: 10px;
+    padding: 5px 15px;
+    box-shadow: 0px 0px 8px gray;
+  
+    .item-img{
+      height: 200px;
+      width: 200px;
+      display: block;
+      margin: 10px auto 20px;
+      border-radius: 50%;
+    }
+    .item-title{
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .item-text{
+      font-size: 14px;
+      text-align: center;
+    }
+    
+    .concept-number{
+      font-size: 10px;
+      text-align: center;
+      opacity: .5;
+      margin: 10px 0;
+    }
+  }  
+}
+.concept-message{
+  font-size: 24px;
+  text-align: right;
+  color: #707070;
+}
+
+// book
+
+.box-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  a{
+    width: 300px;
+  }
+}
+
+.post{
+  border: 1px #707070 dashed;
+  border-radius: 10px;
+  width: 40%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  position: relative;
+
+  .sold-out{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    background-color: #BC544B;
+    color: #ffff;
+    text-align: center;
+    transform: skewY(-24deg);
+  }
+  .post-date{
+    color: gray;
+    margin-left: 5px;
+    font-size: 1rem;
+  }
+  .post-content{
+    color: #082B48;
+    margin-left: 5px;
+    font-size: 1.4rem;
+  }
+}
+
+
+// りょうきん
+
+.price-item{
+  border: 1px #CCCCCC solid;
+  border-radius: 10px;
+  width: 330px;
+  margin: auto;
+
+  h3{
+    text-align: center;
+  }
+
+  .price{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .price-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+  }
+  .detail{
+    font-size: 14px;
+  }
+  .more-detail{
+    font-size: 20px;
+  }
+  .price-btn{
+    margin: 30px auto;
+    
+    &:hover{
+      opacity: .7;
+    }
+  }
+}
+
+// bottom-btn
+#bottom-btn{
+  display: none;
+  height: 100px;
+  border-radius: 50%;
+  position: fixed;
+  right: 60px;
+  bottom: 200px;
+  padding: 5px 25px;
+
+  &:hover{
+    opacity: .7;
+  }
+}

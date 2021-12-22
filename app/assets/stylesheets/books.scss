@@ -1,0 +1,138 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// reset
+h1{
+  margin: 0;
+  font-size: 1.6;
+}
+h2{
+  margin: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+// reset
+// all
+html{
+  color: #082B48;
+  line-height: 1.8;
+}
+
+// img{
+//   width: 100%;
+//   height: auto;
+// }
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #082B48;
+  &:hover{
+    opacity: .7;
+  }
+}
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.btn{
+  display: block;
+  background-color: #082B48;
+  color: #fff;
+  padding: 10px 50px;
+  margin: auto;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+
+  &:hover{
+    opacity: .7;
+  }
+}
+
+// main
+// header
+.header{
+  padding: 20px 0;
+}
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+}
+.nav-item{
+  display: flex;
+}
+.item{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 20px;
+  a{
+    line-height: 57px;
+  }
+}
+.booking-btn{
+  a{
+    line-height: 0;
+    color: #fff;
+  }
+
+  &:hover{
+    opacity: .7;
+  }
+}
+// header
+
+
+
+// footer
+.footer{
+  background-color: #3B4043;
+  
+  .footer-title{
+    color: #CDD6DD;
+  }
+
+  a{
+    color: #fff;
+  }
+}
+.footer-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+  padding: 30px 0;
+}
+.footer-item-wrapper{
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+}
+.footer-title{
+  margin-right: 32px;
+}
+.sns-icon{
+  margin-left: 30px;
+}
+// footer
+
+
+
+
+
